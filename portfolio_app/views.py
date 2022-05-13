@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import os
-def hi(request):
-    return HttpResponse('<h1>This is my home page</h1>')
+def static_home(response):
+    return render(response, 'portfolio_app/home.html', {})
 
 def home(response):
     return render(response, 'portfolio_app/home.html', {})
