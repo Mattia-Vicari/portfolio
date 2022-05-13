@@ -73,10 +73,12 @@
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
 		font-weight: bold;
+		user-select: none;
 	}
 
 	.slidebuttonup:hover{
 		color:#16E788;
+		cursor: pointer;
 	}
 
 	.slidebuttonup{
@@ -86,10 +88,13 @@
 		text-orientation: mixed;
 		font-weight: bold;
 		transition: all 0.5s;
+		opacity: 0;
+		user-select: none;
 	}
 
 	.slidebuttondown:hover{
 		color:#16E788;
+		cursor: pointer;
 	}
 
     .sidebar{
@@ -220,11 +225,11 @@ function slideup(){
 		var sliderRect = document.getElementById("slider").getBoundingClientRect();
 		var offset = Math.abs(iconRect.top - sliderRect.top);
 
-		if (offset > 2*clientHeight) {
-			var n = 3;
+		if (offset < 2*clientHeight) {
+			document.getElementById("slideup").style.opacity = "0";
 		}
 		else {
-			var n = 1;
+			document.getElementById("slidedown").style.opacity = "1";
 		}
 
 		document.getElementById("slider").scrollTo(0, offset - clientHeight - clientHeight/20);
@@ -238,9 +243,11 @@ function slideup(){
 
 		if (offset > clientHeight) {
 			var n = 3;
+			document.getElementById("slidedown").style.opacity = "0";
 		}
 		else {
 			var n = 1;
+			document.getElementById("slideup").style.opacity = "1";
 		}
 
 		document.getElementById("slider").scrollTo(0, offset + n*clientHeight/20 + clientHeight);
