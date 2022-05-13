@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?><pydev_project>
+    <pydev_variables_property name="org.python.pydev.PROJECT_VARIABLE_SUBSTITUTION">
+        <key>env_var:UGII_BASE_DIR</key>
+        <value>C:\Program Files\Siemens\NX1926</value>
+        <key>PY</key>
+        <value>310</value>
+        <key>env_var:CDS_LIC_FILE</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:PROCESSOR_REVISION</key>
+        <value>5000</value>
+        <key>env_var:SPLM_LICENSE_SERVER</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:ProgramFiles</key>
+        <value>C:\Program Files</value>
+        <key>env_var:USERDOMAIN_ROAMINGPROFILE</key>
+        <value>LAPTOP-DI-MATTI</value>
+        <key>env_var:JAVA_HOME</key>
+        <value>"C:\Program Files\Java\jre1.8.0_321"</value>
+        <key>env_var:PROCESSOR_ARCHITECTURE</key>
+        <value>AMD64</value>
+        <key>env_var:RCTECH_LICENSE_FILE</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:CommonProgramFiles(x86)</key>
+        <value>C:\Program Files (x86)\Common Files</value>
+        <key>env_var:PATHEXT</key>
+        <value>.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</value>
+        <key>env_var:USERDOMAIN</key>
+        <value>LAPTOP-DI-MATTI</value>
+        <key>env_var:NUMBER_OF_PROCESSORS</key>
+        <value>16</value>
+        <key>env_var:CDLMD_LICENSE_FILE</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:windir</key>
+        <value>C:\WINDOWS</value>
+        <key>env_var:ProgramFiles(x86)</key>
+        <value>C:\Program Files (x86)</value>
+        <key>env_var:OS</key>
+        <value>Windows_NT</value>
+        <key>env_var:ComSpec</key>
+        <value>C:\WINDOWS\system32\cmd.exe</value>
+        <key>env_var:HOMEPATH</key>
+        <value>\Users\matti</value>
+        <key>env_var:OneDriveConsumer</key>
+        <value>C:\Users\matti\OneDrive</value>
+        <key>env_var:ProgramData</key>
+        <value>C:\ProgramData</value>
+        <key>env_var:SystemRoot</key>
+        <value>C:\WINDOWS</value>
+        <key>env_var:PUBLIC</key>
+        <value>C:\Users\Public</value>
+        <key>env_var:CommonProgramW6432</key>
+        <value>C:\Program Files\Common Files</value>
+        <key>env_var:TMP</key>
+        <value>C:\Users\matti\AppData\Local\Temp</value>
+        <key>env_var:FPS_BROWSER_USER_PROFILE_STRING</key>
+        <value>Default</value>
+        <key>env_var:LOGONSERVER</key>
+        <value>\\LAPTOP-DI-MATTI</value>
+        <key>env_var:ALLUSERSPROFILE</key>
+        <value>C:\ProgramData</value>
+        <key>env_var:LMS_LICENSE</key>
+        <value>5053@172.29.217.3</value>
+        <key>env_var:CommonProgramFiles</key>
+        <value>C:\Program Files\Common Files</value>
+        <key>env_var:COMPUTERNAME</key>
+        <value>LAPTOP-DI-MATTI</value>
+        <key>DJANGO_MANAGE_LOCATION</key>
+        <value>manage.py</value>
+        <key>env_var:SPLM_TASS_LICENSE_SERVER</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:Path</key>
+        <value>C:/Users/matti/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208/jre/bin/server;C:/Users/matti/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.2.v20220201-1208/jre/bin;C:/Users/matti/AppData/Local/Temp/eoi6F5A.tmp//plugins/org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_17.0.2.v20220201-1208/jre/bin/server;C:/Users/matti/AppData/Local/Temp/eoi6F5A.tmp//plugins/org.eclipse.justj.openjdk.hotspot.jre.minimal.stripped.win32.x86_64_17.0.2.v20220201-1208/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2021b\runtime\win64;C:\Program Files\MATLAB\R2021b\bin;C:\Program Files\Siemens\NX1926\CAPITALINTEGRATION\capitalnxremote\;C:\Program Files\Git\cmd;C:\Users\matti\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\matti\AppData\Local\Programs\Python\Python310\;C:\Users\matti\AppData\Local\Microsoft\WindowsApps;C:\Users\matti\AppData\Local\GitHubDesktop\bin;C:\Users\matti\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\matti\Documents\Flutter\flutter\bin;;C:\Users\matti\Downloads;;C:\Users\matti\Downloads;</value>
+        <key>env_var:OneDrive</key>
+        <value>C:\Users\matti\OneDrive</value>
+        <key>env_var:SystemDrive</key>
+        <value>C:</value>
+        <key>env_var:PROCESSOR_IDENTIFIER</key>
+        <value>AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD</value>
+        <key>env_var:TEMP</key>
+        <value>C:\Users\matti\AppData\Local\Temp</value>
+        <key>env_var:PSModulePath</key>
+        <value>C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules</value>
+        <key>env_var:ProgramW6432</key>
+        <value>C:\Program Files</value>
+        <key>env_var:PROCESSOR_LEVEL</key>
+        <value>25</value>
+        <key>env_var:DriverData</key>
+        <value>C:\Windows\System32\Drivers\DriverData</value>
+        <key>env_var:UGII_LANG</key>
+        <value>english</value>
+        <key>env_var:USERNAME</key>
+        <value>Mattia</value>
+        <key>env_var:LOCALAPPDATA</key>
+        <value>C:\Users\matti\AppData\Local</value>
+        <key>env_var:APPDATA</key>
+        <value>C:\Users\matti\AppData\Roaming</value>
+        <key>env_var:FPS_BROWSER_APP_PROFILE_STRING</key>
+        <value>Internet Explorer</value>
+        <key>DJANGO_SETTINGS_MODULE</key>
+        <value>Portfolio.settings</value>
+        <key>env_var:=::</key>
+        <value>::\</value>
+        <key>env_var:MGLS_LICENSE_FILE</key>
+        <value>1999@172.29.217.3</value>
+        <key>env_var:HOMEDRIVE</key>
+        <value>C:</value>
+        <key>env_var:USERPROFILE</key>
+        <value>C:\Users\matti</value>
+        <key>env_var:SESSIONNAME</key>
+        <value>Console</value>
+    </pydev_variables_property>
+    <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+        <path>/${PROJECT_DIR_NAME}</path>
+    </pydev_pathproperty>
+    <pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python interpreter</pydev_property>
+    <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
+</pydev_project>
