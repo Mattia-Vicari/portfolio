@@ -1,0 +1,380 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content%}
+
+<div class="sidebar">
+	<p>-
+        <font color="#14293C">
+            <b>Who I am</b>
+        </font>
+        -</p>
+
+		<div class="essay">
+			<p>I am a young man graduated in mechanical engineering at Politecnico di Milano</p>
+		</div>
+</div>
+
+<div class="portfolio-preview">
+    <p>Browse my 
+        <font color="#16E788">
+            <b>eperience</b>
+        </font>
+        by...</p>
+    <p class="language">Programming language</p>
+    <p class="topic">Topic</p>
+
+    <div class="slider">
+        <div class="container">
+            <div class="slide x"></div>
+            <div class="slide y"></div>
+            <div class="slide z"></div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <div class="slider2">
+        <div class="container2">
+            <div class="slide2 x"></div>
+            <div class="slide2 y"></div>
+            <div class="slide2 z"></div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+</div>
+
+<style>
+
+    :root {
+        --dim: 75px;
+        --neg-dim: -75px;
+        --slide-dim: 150px;
+    }
+    .sidebar {
+        background-color: #16E788;
+        position: absolute;
+        height: 100%;
+        width: 30%;
+		font-size: 40pt;
+    }
+
+	.essay {
+		font-size: 20pt;
+		text-align: left;
+		font-weight: 600;
+		margin: 50px;
+	}
+
+    .portfolio-preview{
+        position: fixed;
+        height: 100%;
+        width: 70%;
+        top: 0;
+        right: 0;
+        font-size: 40pt;
+    }
+
+    .language{
+        position: absolute;
+        top: 275px;
+        right: 40%;
+        font-size: 30pt;
+    }
+
+    .topic{
+        position: absolute;
+        top: 575px;
+        right: 40%;
+        font-size: 30pt;
+    }
+
+    .slider {
+        position: absolute;
+        top: 250px;
+        right: 15%;
+        width: var(--slide-dim);
+        height: var(--slide-dim);
+        margin: auto;
+        -webkit-perspective: 600px;
+                perspective: 600px;
+    }
+
+    .slider * {
+		-webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+		        transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+	}
+
+    .slider2 {
+        position: absolute;
+        top: 550px;
+        right: 15%;
+        width: var(--slide-dim);
+        height: var(--slide-dim);
+        margin: auto;
+        -webkit-perspective: 600px;
+                perspective: 600px;
+    }
+
+	.slider2 * {
+		-webkit-transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+		        transition: all 1s cubic-bezier(0.5, -0.75, 0.2, 1.5);
+	}
+
+	.container {
+		width: inherit;
+		height: inherit;
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		-webkit-transform: rotateY(0deg) rotateX(0deg);
+		        transform: rotateY(0deg) rotateX(0deg);
+	}
+
+		.slide, .slide:after, .slide:before {
+			display: block;
+			width: inherit;
+			height: inherit;
+			background: url('https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg');
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+			        transform-style: preserve-3d;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.slide.x {
+		  -webkit-transform: rotateY(90deg);
+		          transform: rotateY(90deg);
+		} 
+
+			.slide.x:after {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg');
+                background-size: 57% 80%;
+                background-repeat: no-repeat;
+                background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--dim)) rotateZ(-90deg);
+				        transform: translateZ(var(--dim)) rotateZ(-90deg);
+			}
+
+			.slide.x:before {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg');
+                background-size: 80% 80%;
+                background-repeat: no-repeat;
+				background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--neg-dim)) rotateZ(-90deg) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) rotateZ(-90deg) scaleX(-1);
+			}
+
+		.slide.y {
+		  -webkit-transform: rotateX(90deg);
+		          transform: rotateX(90deg);
+		} 
+
+			.slide.y:after {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png');
+                background-size: 80% 70%;
+                background-repeat: no-repeat;
+				background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--dim)) scale(-1);
+				        transform: translateZ(var(--dim)) scale(-1);
+			}
+
+			.slide.y:before {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg');
+                background-repeat: no-repeat;
+				background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--neg-dim)) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) scaleX(-1);
+			}
+
+		.slide.z {
+		  -webkit-transform: rotateX(0);
+		          transform: rotateX(0);
+		} 
+
+			.slide.z:after {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg');
+				background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--dim));
+				        transform: translateZ(var(--dim));
+			}
+
+			.slide.z:before {
+				content: '';
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg');
+                background-size: 80% 80%;
+                background-repeat: no-repeat;
+				background-color: rgb(200, 220, 215);
+				-webkit-transform: translateZ(var(--neg-dim)) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) scaleX(-1);
+
+                
+			}
+		.container {
+			-webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+			animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+		}
+
+        .container2 {
+		width: inherit;
+		height: inherit;
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		-webkit-transform: rotateY(0deg) rotateX(0deg);
+		        transform: rotateY(0deg) rotateX(0deg);
+	}
+
+		.slide2, .slide2:after, .slide2:before {
+			display: block;
+			width: inherit;
+			height: inherit;
+			position: absolute;
+			-webkit-transform-style: preserve-3d;
+			        transform-style: preserve-3d;
+			background-size: cover;
+			background-position: center;
+            font-size: 20pt;
+            text-align: center;
+            line-height: var(--slide-dim);
+		}
+
+		.slide2.x {
+		  -webkit-transform: rotateY(90deg);
+		          transform: rotateY(90deg);
+		} 
+
+			.slide2.x:after {
+				content: '';
+                background-color: #295B57;
+				-webkit-transform: translateZ(var(--dim)) rotateZ(-90deg);
+				        transform: translateZ(var(--dim)) rotateZ(-90deg);
+			}
+
+			.slide2.x:before {
+				content: '';
+				background-color: #295B57;
+				-webkit-transform: translateZ(var(--neg-dim)) rotateZ(-90deg) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) rotateZ(-90deg) scaleX(-1);
+			}
+
+		.slide2.y {
+		  -webkit-transform: rotateX(90deg);
+		          transform: rotateX(90deg);
+		} 
+
+			.slide2.y:after {
+				content: '';
+				background-color: #8FD577;
+				-webkit-transform: translateZ(var(--dim)) scale(-1);
+				        transform: translateZ(var(--dim)) scale(-1);
+			}
+
+			.slide2.y:before {
+				content: '';
+				background-color: #8FD577;
+				-webkit-transform: translateZ(var(--neg-dim)) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) scaleX(-1);
+			}
+
+		.slide2.z {
+		  -webkit-transform: rotateX(0);
+		          transform: rotateX(0);
+		} 
+
+			.slide2.z:after {
+				content: 'Web Development';
+				background-color: #459A54;
+				-webkit-transform: translateZ(var(--dim));
+				        transform: translateZ(var(--dim));
+			}
+
+			.slide2.z:before {
+				content: '';
+                background-size: 80% 80%;
+                background-repeat: no-repeat;
+				background-color: #459A54;
+				-webkit-transform: translateZ(var(--neg-dim)) scaleX(-1);
+				        transform: translateZ(var(--neg-dim)) scaleX(-1);
+
+                
+			}
+		.container2 {
+			-webkit-animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+			animation: rotate 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+		}
+
+		@-webkit-keyframes rotate {
+			0%, 10% {-webkit-transform: rotateY(0deg) rotateX(0deg);transform: rotateY(0deg) rotateX(0deg);}
+			15%, 20% {-webkit-transform: rotateY(180deg) rotateX(0deg);transform: rotateY(180deg) rotateX(0deg);}
+			25%, 35% {-webkit-transform: rotateY(180deg) rotateX(270deg);transform: rotateY(180deg) rotateX(270deg);}
+			40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);transform: rotateY(180deg) rotateX(90deg);}
+			55%, 65% {-webkit-transform: rotateY(-90deg) rotateX(90deg);transform: rotateY(-90deg) rotateX(90deg);}
+			70%, 80% {-webkit-transform: rotateY(90deg) rotateX(90deg);transform: rotateY(90deg) rotateX(90deg);}
+			90%, 95% {-webkit-transform: rotateY(0deg) rotateX(90deg);transform: rotateY(0deg) rotateX(90deg);}
+		}
+
+		@keyframes rotate {
+			0%, 10% {-webkit-transform: rotateY(0deg) rotateX(0deg);transform: rotateY(0deg) rotateX(0deg);}
+			15%, 20% {-webkit-transform: rotateY(180deg) rotateX(0deg);transform: rotateY(180deg) rotateX(0deg);}
+			25%, 35% {-webkit-transform: rotateY(180deg) rotateX(270deg);transform: rotateY(180deg) rotateX(270deg);}
+			40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);transform: rotateY(180deg) rotateX(90deg);}
+			55%, 65% {-webkit-transform: rotateY(-90deg) rotateX(90deg);transform: rotateY(-90deg) rotateX(90deg);}
+			70%, 80% {-webkit-transform: rotateY(90deg) rotateX(90deg);transform: rotateY(90deg) rotateX(90deg);}
+			90%, 95% {-webkit-transform: rotateY(0deg) rotateX(90deg);transform: rotateY(0deg) rotateX(90deg);}
+		}
+
+
+    .shadow {
+        display: block;
+        width: var(--slide-dim);
+        height: var(--slide-dim);
+        background: rgba(0,0,0,0.75);
+        position: absolute;
+        top: 60%;
+        -webkit-transform: rotateX(90deg);
+                transform: rotateX(90deg);
+        z-index: -1;
+        -webkit-filter: blur(20px);
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="20" /></filter></svg>#filter');
+        -webkit-filter: blur(20px);
+                filter: blur(20px);
+        left: 0;
+        right: 0;
+        margin: auto;
+        -webkit-animation: rotateShadow 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+        animation: rotateShadow 15s infinite cubic-bezier(1, -0.75, 0.5, 1.2);
+    }
+
+	@-webkit-keyframes rotateShadow {
+		0%, 10% {-webkit-transform: rotateY(0deg) rotateX(90deg);}	
+		15%, 20% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+		20.1%, 20.9% {-webkit-transform: rotateY(180deg) rotateX(90deg) translatez(5px);}
+		25%, 35% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+		35.1%, 35.9% {-webkit-transform: rotateY(180deg) rotateX(90deg) translatez(-5px);}
+		40%, 50% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+		55%, 65% {-webkit-transform: rotateY(0deg) rotateX(90deg);}
+		70%, 80% {-webkit-transform: rotateY(180deg) rotateX(90deg);}
+		90%, 99% {-webkit-transform: rotateY(90deg) rotateX(90deg);}
+		99.1%, 99.9% {-webkit-transform: rotateY(90deg) rotateX(90deg) translatez(-5px);}
+	}
+
+    @keyframes rotateShadow {
+		0%, 10% {transform: rotateY(0deg) rotateX(90deg);}	
+		15%, 20% {transform: rotateY(180deg) rotateX(90deg); opacity: 1; filter: alpha(opacity=100);}
+		20.1%, 20.9% {transform: rotateY(180deg) rotateX(90deg) translatez(10px); opacity: 0.95; filter: alpha(opacity=95);}
+		25%, 35% {transform: rotateY(180deg) rotateX(90deg); opacity: 1; filter: alpha(opacity=100);}
+		35.1%, 35.9% {transform: rotateY(180deg) rotateX(90deg) translatez(-10px); opacity: 0.95; filter: alpha(opacity=95);}
+		40%, 50% {transform: rotateY(180deg) rotateX(90deg);}
+		55%, 65% {transform: rotateY(0deg) rotateX(90deg);}
+		70%, 80% {transform: rotateY(180deg) rotateX(90deg);}
+		90%, 99% {transform: rotateY(0deg) rotateX(90deg);}
+		99.1%, 99.9% {transform: rotateY(180deg) rotateX(90deg) translatez(5px); opacity: 0.95; filter: alpha(opacity=95);}
+	}
+</style>
+
+
+{% endblock %}
