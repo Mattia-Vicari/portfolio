@@ -1,0 +1,255 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content%}
+
+<div class="title-container">
+    <p>{{title}} &#160PROJECTS</p>
+    
+</div>
+<div class="projects-container">
+    <!-- first line -->
+    <div class="projects" id="p11">
+        <div class="project-title">
+            Project Title
+        </div>
+        <p class="project-description">Brief description of the project of a project of a project of a project</p>
+    </div>
+    <div class="projects" id="p12">
+
+    </div>
+    <div class="projects" id="p13">
+
+    </div>
+    <div class="projects" id="p14">
+
+    </div>
+    <!-- second line -->
+    <div class="projects" id="p21">
+
+    </div>
+    <div class="projects" id="p22">
+
+    </div>
+    <div class="projects" id="p23">
+
+    </div>
+    <div class="projects" id="p24">
+
+    </div>
+    <!-- third line -->
+    <div class="projects" id="p31">
+
+    </div>
+    <div class="projects" id="p32">
+
+    </div>
+    <div class="projects" id="p33">
+
+    </div>
+    <div class="projects" id="p34">
+
+    </div>
+</div>
+
+<style>
+    .title-container{
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		position: absolute;
+        padding-left: 5%;
+		background-image: linear-gradient(to right, #16E788, #14293C);
+		top: 50px;
+		left: 0%;
+		width: 70%;
+		height: 60px;
+		color: #14293C;
+		font-weight: bold;
+		font-size: 30pt;
+        text-transform: uppercase;
+	}
+
+    .projects-container{
+        position: absolute;
+        top: 110px;
+        height: 85%;
+        width: 100%;
+    }
+
+    .project-title{
+        display: flex;
+		align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        background-color: #295B57;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        color: white;
+        font-size: 20pt;
+        transition-duration: 0.5s;
+    }
+
+    .projects:hover > .project-title{
+        background-color: #16E788;
+        color:  #14293C;
+        font-weight: bold;
+    }
+
+    .project-description{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        font-size: 15pt;
+        width: 80%;
+        height: 70%;
+        left: 10%;
+        bottom: -20px;
+        transition-duration: 0.5s;
+    }
+
+    .projects:hover > .project-description{
+        color: #14293C;
+        font-weight: bold;
+    }
+
+    .projects{
+        position: absolute;
+        background-color: #ffffff10;
+        border-radius: 20px;
+        width: 21%;
+        height: 25%;
+        transition-duration: 0.5s;
+    }
+
+    .projects:hover{
+        width: 23%;
+        height: 27%;
+        background-color: white;
+    }
+
+    #p11{
+        top: 10%;
+        left: 5%;
+    }
+
+    #p12{
+        top: 10%;
+        left: 28%;
+    }
+
+    #p13{
+        top: 10%;
+        left: 51%;
+    }
+
+    #p14{
+        top: 10%;
+        left: 74%;
+    }
+
+    #p21{
+        top: 37.5%;
+        left: 5%;
+    }
+
+    #p22{
+        top: 37.5%;
+        left: 28%;
+    }
+
+    #p23{
+        top: 37.5%;
+        left: 51%;
+    }
+
+    #p24{
+        top: 37.5%;
+        left: 74%;
+    }
+
+    #p31{
+        top: 65%;
+        left: 5%;
+    }
+
+    #p32{
+        top: 65%;
+        left: 28%;
+    }
+
+    #p33{
+        top: 65%;
+        left: 51%;
+    }
+
+    #p34{
+        top: 65%;
+        left: 74%;
+    }
+
+    #p11:hover{
+        top: 9%;
+        left: 4%;
+    }
+
+    #p12:hover{
+        top: 9%;
+        left: 27%;
+    }
+
+    #p13:hover{
+        top: 9%;
+        left: 50%;
+    }
+
+    #p14:hover{
+        top: 9%;
+        left: 73%;
+    }
+
+    #p21:hover{
+        top: 36.5%;
+        left: 4%;
+    }
+
+    #p22:hover{
+        top: 36.5%;
+        left: 27%;
+    }
+
+    #p23:hover{
+        top: 36.5%;
+        left: 50%;
+    }
+
+    #p24:hover{
+        top: 36.5%;
+        left: 73%;
+    }
+
+    #p31:hover{
+        top: 64%;
+        left: 4%;
+    }
+
+    #p32:hover{
+        top: 64%;
+        left: 27%;
+    }
+
+    #p33:hover{
+        top: 64%;
+        left: 50%;
+    }
+
+    #p34:hover{
+        top: 64%;
+        left: 73%;
+    }
+
+</style>
+
+{% endblock %}

@@ -12,15 +12,57 @@
 		<div class="essay">
 			<p>I am a young man graduated in mechanical engineering at Politecnico di Milano</p>
 		</div>
+
+		<div class="media-icons">
+			<a href="https://github.com/Mattia-Vicari" target="__blank">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="social-icon">
+			</a>
+			<div class="icon-divisor"></div>
+			<a href="https://www.linkedin.com/in/mattia-vicari-7b3b3b174/" target="__blank">
+				<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png?w=360" class="social-icon" >
+			</a>
+		</div>
 </div>
 
 <div class="container-1">
-	<div class="slideshow">
+	<div class="slider-container">
 
+		<p class="slidebuttonup" id="slideup-1" onclick="slideup_1()">&#8249</p>
+
+		<div class="slideshow" id="slider-1">
+			<a href="{% url 'projects' pk='python' %}">
+				<div class="icon-1" id="icon-1">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg" height="100%">		
+				</div>
+			</a>
+			<a href="{% url 'projects' pk='html' %}">
+				<div class="icon-2">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" height="80%">
+				</div>
+			</a>
+			<a href="{% url 'projects' pk='css' %}">
+				<div class="icon-3">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" height="80%">
+				</div>
+			</a>
+			<a href="{% url 'projects' pk='javascript' %}">
+				<div class="icon-4">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Javascript-736400_960_720.png" height="80%">
+				</div>
+			</a>
+			<a href="{% url 'projects' pk='matlab' %}">
+				<div class="icon-5">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" height="80%">
+				</div>
+			</a>
+			<div class="icon-6"></div>
+		</div>
+
+		<p class="slidebuttondown" id="slidedown-1" onclick="slidedown_1()">&#8250</p>
 	</div>
 
 	<div class="slideshow-title">
-		<p>Projects by programming languages</p>
+		<p>PROJECTS &#160BY &#160PROGRAMMING &#160LANGUAGES</p>
 	</div>
 	
 </div>
@@ -28,20 +70,20 @@
 <div class="container-2">
 	<div class="slider-container">
 
-		<p class="slidebuttonup" id="slideup" onclick="slideup()"><</p>
+		<p class="slidebuttonup" id="slideup-2" onclick="slideup_2()">&#8249</p>
 
-		<div class="slideshow" id="slider">
-			<div class="icon-1" id="icon">
-
+		<div class="slideshow" id="slider-2">
+			<div class="icon-1" id="icon-2">
+				<p class="topic">Open Source</p>
 			</div>
 			<div class="icon-2">
-
+				<p class="topic">Web Development</p>
 			</div>
 			<div class="icon-3">
-
+				<p class="topic">Python Libraries</p>
 			</div>
 			<div class="icon-4">
-
+				<p class="topic">Open Source</p>
 			</div>
 			<div class="icon-5">
 
@@ -51,20 +93,23 @@
 			</div>
 		</div>
 
-		<p class="slidebuttondown" id="slidedown" onclick="slidedown()">></p>
+		<p class="slidebuttondown" id="slidedown-2" onclick="slidedown_2()">&#8250</p>
 	</div>
 
 	<div class="slideshow-title">
-		<p>Projects by topics</p>
+		<p>PROJECTS &#160BY &#160TOPICS</p>
 	</div>
 </div>
 
 
 <style>
 	:root{
-		--icon-width: 300px;
-		--icon-height: 200px;
-		--icon-bgc: white;
+		--icon-width: 90%;
+		--icon-height: 30%;
+		--icon-left-offset: 5%;
+		--icon-border-radius: 20px;
+		--icon-border-width: 1.5px;
+		--icon-background-color: #ffffff10;
 	}
 
 	.slidebuttondown{
@@ -110,11 +155,12 @@
 		text-align: center;
 		font-weight: 600;
 		margin: 50px;
+		color: #14293C;
 	}
 
 	.container-1{
         position: absolute;
-		left: 30%;
+		left: 33%;
         height: 100%;
         width: 35%;
 		font-size: 40pt;
@@ -139,56 +185,115 @@
 	}
 
 	.icon-1{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		border: 2px solid white;
+		background-color: var(--icon-background-color);
+		border-radius: var(--icon-border-radius);
 		top: 1.5%;
-		left: 5%;
-		width: 90%;
-		height: 30%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		transition-duration: 0.5s;
+	}
+
+	.icon-1:hover{
+		background-color: white;
+		color:#14293C;
+		font-weight: bold;
 	}
 
 	.icon-2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		border: 2px solid white;
+		background-color: var(--icon-background-color);
+		border-radius: var(--icon-border-radius);
 		top: 34.5%;
-		left: 5%;
-		width: 90%;
-		height: 30%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		transition-duration: 0.5s;
+	}
+
+	.icon-2:hover{
+		background-color: white;
+		color:#14293C;
+		font-weight: bold;
 	}
 
 	.icon-3{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		border: 2px solid white;
+		background-color: var(--icon-background-color);
+		border-radius: var(--icon-border-radius);
 		top: 67.5%;
-		left: 5%;
-		width: 90%;
-		height: 30%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		transition-duration: 0.5s;
+	}
+
+	.icon-3:hover{
+		background-color: white;
+		color:#14293C;
+		font-weight: bold;
 	}
 
 	.icon-4{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		border: 2px solid red;
+		background-color: var(--icon-background-color);;
+		border-radius: var(--icon-border-radius);
 		top: 100.5%;
-		left: 5%;
-		width: 90%;
-		height: 30%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		transition-duration: 0.5s;
+	}
+
+	.icon-4:hover{
+		background-color: white;
+		color:#14293C;
+		font-weight: bold;
 	}
 
 	.icon-5{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		border: 2px solid blue;
+		background-color: var(--icon-background-color);
+		border-radius: var(--icon-border-radius);
 		top: 133.5%;
-		left: 5%;
-		width: 90%;
-		height: 30%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		transition-duration: 0.5s;
+	}
+
+	.icon-5:hover{
+		background-color: white;
+		color:#14293C;
+		font-weight: bold;
 	}
 
 	.icon-6{
 		position: absolute;
 		top: 164%;
-		left: 5%;
-		width: 90%;
+		left: var(--icon-left-offset);
+		width: var(--icon-width);
 		height: 1.5%;
+	}
+
+	.topic{
+		font-size: 20pt;
 	}
 
 	.slideshow-title{
@@ -196,13 +301,16 @@
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		left: 80%;
-		width: 20%;
-		height: 100%;
+		background-image: linear-gradient(#14293C, #16E788, #14293C);
+		top: 12%;
+		left: 72%;
+		width: 50px;
+		height: 76%;
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
-		font-size: 25pt;
-		text-align: center;
+		color: #14293C;
+		font-weight: bold;
+		font-size: 20pt;
 	}
 
 	.slider-container{
@@ -215,46 +323,105 @@
 		height: 100%;
 	}
 
+	.media-icons{
+		position: absolute;
+		bottom: 10%;
+		left: 25%;
+		height: 5%;
+		width: 50%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon-divisor{
+		height: 100%;
+		width: 10%;
+	}
+
+	.social-icon{
+		height: 100%;
+		filter: brightness(0) invert(1);
+		transition-duration: 0.5s;
+	}
+
+	.social-icon:hover{
+		filter: saturate(100%);
+	}
+
 </style>
 
 <script>
 
-function slideup(){
-		var clientHeight = document.getElementById("icon").clientHeight;
-		var iconRect = document.getElementById("icon").getBoundingClientRect();
-		var sliderRect = document.getElementById("slider").getBoundingClientRect();
+	function slideup_1(){
+		var clientHeight = document.getElementById("icon-1").clientHeight;
+		var iconRect = document.getElementById("icon-1").getBoundingClientRect();
+		var sliderRect = document.getElementById("slider-1").getBoundingClientRect();
 		var offset = Math.abs(iconRect.top - sliderRect.top);
 
 		if (offset < 2*clientHeight) {
-			document.getElementById("slideup").style.opacity = "0";
+			document.getElementById("slideup-1").style.opacity = "0";
 		}
 		else {
-			document.getElementById("slidedown").style.opacity = "1";
+			document.getElementById("slidedown-1").style.opacity = "1";
 		}
 
-		document.getElementById("slider").scrollTo(0, offset - clientHeight - clientHeight/20);
+		document.getElementById("slider-1").scrollTo(0, offset - clientHeight - clientHeight/20);
 	}
 
-	function slidedown(){
-		var clientHeight = document.getElementById("icon").clientHeight;
-		var iconRect = document.getElementById("icon").getBoundingClientRect();
-		var sliderRect = document.getElementById("slider").getBoundingClientRect();
+	function slidedown_1(){
+		var clientHeight = document.getElementById("icon-1").clientHeight;
+		var iconRect = document.getElementById("icon-1").getBoundingClientRect();
+		var sliderRect = document.getElementById("slider-1").getBoundingClientRect();
 		var offset = Math.abs(iconRect.top - sliderRect.top);
 
 		if (offset > clientHeight) {
 			var n = 3;
-			document.getElementById("slidedown").style.opacity = "0";
+			document.getElementById("slidedown-1").style.opacity = "0";
 		}
 		else {
 			var n = 1;
-			document.getElementById("slideup").style.opacity = "1";
+			document.getElementById("slideup-1").style.opacity = "1";
 		}
 
-		document.getElementById("slider").scrollTo(0, offset + n*clientHeight/20 + clientHeight);
+		document.getElementById("slider-1").scrollTo(0, offset + n*clientHeight/20 + clientHeight);
+	}
+
+	function slideup_2(){
+		var clientHeight = document.getElementById("icon-2").clientHeight;
+		var iconRect = document.getElementById("icon-2").getBoundingClientRect();
+		var sliderRect = document.getElementById("slider-2").getBoundingClientRect();
+		var offset = Math.abs(iconRect.top - sliderRect.top);
+
+		if (offset < 2*clientHeight) {
+			document.getElementById("slideup-2").style.opacity = "0";
+		}
+		else {
+			document.getElementById("slidedown-2").style.opacity = "1";
+		}
+
+		document.getElementById("slider-2").scrollTo(0, offset - clientHeight - clientHeight/20);
+	}
+
+	function slidedown_2(){
+		var clientHeight = document.getElementById("icon-2").clientHeight;
+		var iconRect = document.getElementById("icon-2").getBoundingClientRect();
+		var sliderRect = document.getElementById("slider-2").getBoundingClientRect();
+		var offset = Math.abs(iconRect.top - sliderRect.top);
+
+		if (offset > clientHeight) {
+			var n = 3;
+			document.getElementById("slidedown-2").style.opacity = "0";
+		}
+		else {
+			var n = 1;
+			document.getElementById("slideup-2").style.opacity = "1";
+		}
+
+		document.getElementById("slider-2").scrollTo(0, offset + n*clientHeight/20 + clientHeight);
 	}
 
 </script>
-
-
 
 {% endblock %}
