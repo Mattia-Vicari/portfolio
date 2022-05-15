@@ -133,7 +133,7 @@
 		text-orientation: mixed;
 		font-weight: bold;
 		transition: all 0.5s;
-		opacity: 0;
+		opacity: 0.2;
 		user-select: none;
 	}
 
@@ -361,7 +361,7 @@
 		var offset = Math.abs(iconRect.top - sliderRect.top);
 
 		if (offset < 2*clientHeight) {
-			document.getElementById("slideup-1").style.opacity = "0";
+			document.getElementById("slideup-1").style.opacity = "0.2";
 		}
 		else {
 			document.getElementById("slidedown-1").style.opacity = "1";
@@ -378,7 +378,7 @@
 
 		if (offset > clientHeight) {
 			var n = 3;
-			document.getElementById("slidedown-1").style.opacity = "0";
+			document.getElementById("slidedown-1").style.opacity = "0.2";
 		}
 		else {
 			var n = 1;
@@ -395,7 +395,7 @@
 		var offset = Math.abs(iconRect.top - sliderRect.top);
 
 		if (offset < 2*clientHeight) {
-			document.getElementById("slideup-2").style.opacity = "0";
+			document.getElementById("slideup-2").style.opacity = "0.2";
 		}
 		else {
 			document.getElementById("slidedown-2").style.opacity = "1";
@@ -412,7 +412,7 @@
 
 		if (offset > clientHeight) {
 			var n = 3;
-			document.getElementById("slidedown-2").style.opacity = "0";
+			document.getElementById("slidedown-2").style.opacity = "0.2";
 		}
 		else {
 			var n = 1;
@@ -420,6 +420,17 @@
 		}
 
 		document.getElementById("slider-2").scrollTo(0, offset + n*clientHeight/20 + clientHeight);
+	}
+
+	var verticalLayout = false;
+	var screenWidth = $window.innerWidth;
+	var screenHeight =$window.innerHeight;
+
+	if (screenHeight > screenWidth){
+		verticalLayout = true;
+	} 
+	else{
+		verticalLayout = false;
 	}
 
 </script>
