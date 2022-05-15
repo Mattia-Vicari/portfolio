@@ -6,6 +6,16 @@
     <p>{{title}} &#160PROJECTS</p>
     
 </div>
+<div id="menu-button"  onclick="openMenu()">&#8801</div>
+<div id="menu">
+    <div id="close-menu" onclick="closeMenu()">&#215</div>
+    <a class="menu-element" id="me1" href="{% url 'projects' pk='python' %}">Python</a>
+    <a class="menu-element" id="me2" href="{% url 'projects' pk='html' %}">Html</a>
+    <a class="menu-element" id="me3" href="{% url 'projects' pk='css' %}">Css</a>
+    <a class="menu-element" id="me4" href="{% url 'projects' pk='javascript' %}">Javascript</a>
+    <a class="menu-element" id="me5" href="{% url 'projects' pk='matlab' %}">Matlab</a>
+</div>
+
 <div class="projects-container">
     <!-- first line -->
     <div class="projects" id="p11">
@@ -68,6 +78,101 @@
 		font-size: 30pt;
         text-transform: uppercase;
 	}
+
+    #menu-button{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        right: 5%;
+        top: 50px;
+        font-size: 30pt;
+        background-color: #16E788;
+        color: #14293C;
+        border-radius: 10px;
+        border: none;
+        transition-duration: 0.5s;
+        user-select: none;
+    }
+
+    #close-menu{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        right: 0px;
+        top: -5px;
+        font-size: 30pt;
+        color: white;
+        user-select: none;
+    }
+
+    #close-menu:hover{
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #menu{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        right: 5%;
+        top: 50px;
+        background-color: #16E788;
+        border-radius: 10px;
+        border: none;
+        z-index: -1;
+        transition-duration: 0.5s;
+        overflow: hidden;
+    }
+
+    .menu-element{
+        display: flex;
+		align-items: center;
+        justify-content: left;
+        position: absolute;
+        width: 285px;
+        height: 60px;
+        color: white;
+        font-size: 20pt;
+        text-decoration-line: none;
+        padding-left: 15px;
+        transition-duration: 0.5s;
+        visibility: hidden;
+    }
+
+    #me1{
+        top: 60px;
+    }
+    #me2{
+        top: 120px;
+    }
+    #me3{
+        top: 180px;
+    }
+    #me4{
+        top: 240px;
+    }
+    #me5{
+        top: 300px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .menu-element:hover{
+        background-color: #16E788;
+        color: #14293C;
+        font-weight: bold;
+    }
+
+    #menu-button:hover{
+        border: 1.5px solid white;
+        cursor: pointer;
+    }
 
     .projects-container{
         position: absolute;
@@ -251,5 +356,39 @@
     }
 
 </style>
+
+<script>
+    function openMenu(){
+        document.getElementById("menu").style.width = "300px";
+        document.getElementById("menu").style.height = "360px";
+        document.getElementById("menu").style.backgroundColor = "#295B57";
+        document.getElementById("menu").style.zIndex = "1";
+        document.getElementById("menu").style.borderRadius = "20px";
+
+        document.getElementById("menu-button").style.borderRadius = "22px";
+
+        document.getElementById("me1").style.visibility = "visible";
+        document.getElementById("me2").style.visibility = "visible";
+        document.getElementById("me3").style.visibility = "visible";
+        document.getElementById("me4").style.visibility = "visible";
+        document.getElementById("me5").style.visibility = "visible";
+    }
+
+    function closeMenu(){
+        document.getElementById("menu").style.width = "60px";
+        document.getElementById("menu").style.height = "60px";
+        document.getElementById("menu").style.backgroundColor = "#16E788";
+        document.getElementById("menu").style.zIndex = "-1";
+        document.getElementById("menu").style.borderRadius = "10px";
+
+        document.getElementById("menu-button").style.borderRadius = "10px";
+
+        document.getElementById("me1").style.visibility = "hidden";
+        document.getElementById("me2").style.visibility = "hidden";
+        document.getElementById("me3").style.visibility = "hidden";
+        document.getElementById("me4").style.visibility = "hidden";
+        document.getElementById("me5").style.visibility = "hidden";
+    }
+</script>
 
 {% endblock %}

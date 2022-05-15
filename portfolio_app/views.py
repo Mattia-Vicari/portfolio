@@ -11,5 +11,4 @@ def about(response):
     return render(response, 'portfolio_app/about.html', {})
 
 def projects(response, pk):
-
     return render(response, 'portfolio_app/projects.html', {"title": pk})
