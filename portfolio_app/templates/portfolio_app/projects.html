@@ -9,6 +9,7 @@
 <div id="menu-button"  onclick="openMenu()">&#8801</div>
 <div id="menu">
     <div id="close-menu" onclick="closeMenu()">&#215</div>
+    <a class="menu-element" id="about" href="../about">ABOUT ME</a>
     <a class="menu-element" id="me1" href="{% url 'projects' pk='python' %}">Python</a>
     <a class="menu-element" id="me2" href="{% url 'projects' pk='html' %}">Html</a>
     <a class="menu-element" id="me3" href="{% url 'projects' pk='css' %}">Css</a>
@@ -145,20 +146,23 @@
         visibility: hidden;
     }
 
-    #me1{
+    #about{
         top: 60px;
     }
-    #me2{
+    #me1{
         top: 120px;
     }
-    #me3{
+    #me2{
         top: 180px;
     }
-    #me4{
+    #me3{
         top: 240px;
     }
-    #me5{
+    #me4{
         top: 300px;
+    }
+    #me5{
+        top: 360px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
@@ -360,13 +364,14 @@
 <script>
     function openMenu(){
         document.getElementById("menu").style.width = "300px";
-        document.getElementById("menu").style.height = "360px";
+        document.getElementById("menu").style.height = "420px";
         document.getElementById("menu").style.backgroundColor = "#295B57";
         document.getElementById("menu").style.zIndex = "1";
         document.getElementById("menu").style.borderRadius = "20px";
 
         document.getElementById("menu-button").style.borderRadius = "22px";
 
+        document.getElementById("about").style.visibility = "visible";
         document.getElementById("me1").style.visibility = "visible";
         document.getElementById("me2").style.visibility = "visible";
         document.getElementById("me3").style.visibility = "visible";
@@ -383,6 +388,7 @@
 
         document.getElementById("menu-button").style.borderRadius = "10px";
 
+        document.getElementById("about").style.visibility = "hidden";
         document.getElementById("me1").style.visibility = "hidden";
         document.getElementById("me2").style.visibility = "hidden";
         document.getElementById("me3").style.visibility = "hidden";
